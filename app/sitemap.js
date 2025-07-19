@@ -1,7 +1,7 @@
-import { getProductsRecomendation } from "@/services/sanity-api";
+import { getProducts } from "@/services/sanity-api";
 
 export default async function sitemap() {
-  const fetchedProducts = await getProductsRecomendation();
+  const fetchedProducts = await getProducts("Rekomendasi");
 
   const products = fetchedProducts?.map((product) => {
     return {
