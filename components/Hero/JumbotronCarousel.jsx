@@ -29,7 +29,7 @@ export default function JumbotronCarousel() {
             src={JumbotronImage1}
             alt="image-jumbotron"
             width={1080}
-            className="h-[400px] rounded-md object-cover"
+            className="h-[400px] rounded-md object-contain"
           />
         </CarouselItem>
         <CarouselItem key={2}>

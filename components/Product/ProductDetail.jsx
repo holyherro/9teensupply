@@ -13,7 +13,7 @@ export default function ProductDetail({ product }) {
 
   const handleBookingProduct = () => {
     const message = `Halo saya tertarik dengan produk ${title}`.split(" ").join("%20");
-    window.open(`https://wa.me/6285710102927?text=${message}`, '_blank')
+    window.open(`https://wa.me/6285892748031?text=${message}`, '_blank')
   }
   return (
     <section className="mt-10">
@@ -32,7 +32,7 @@ export default function ProductDetail({ product }) {
                 alt="image-jumbotron"
                 width={480}
                 height={1920}
-                className="h-[400px] rounded-md object-cover"
+                className="h-[400px] object-cover"
               />
             </CarouselItem>
           ))}
@@ -45,7 +45,7 @@ export default function ProductDetail({ product }) {
         <Card className="p-4 md:w-[75%]">
           <h1 className="font-bold text-slate-800 sm:text-[2rem] text-[1.3rem]">{title}</h1>
 
-          <p className="flex gap-2 items-center text-[1rem] text-slate-600">
+          <p className="flex gap-2 items-center text-[.7rem] sm:text-[1rem] text-slate-600">
             <MapPin size={12} />
             {location}
           </p>
@@ -61,7 +61,7 @@ export default function ProductDetail({ product }) {
       <Card className="mt-4 overflow-hidden mb-4">
         <h1 className="w-72 text-[1.2rem] h-14 px-4 bg-slate-800 flex items-center text-white rounded-tr-full rounded-br-full">Deskripsi Produk</h1>
 
-        <div className="px-8 py-4">
+        <div className="px-8 py-4 text-[.8rem] sm:text-[1rem]">
           <PortableText value={description} />
         </div>
       </Card>

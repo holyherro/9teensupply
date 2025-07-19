@@ -10,21 +10,10 @@ export async function getProducts(category) {
       location,
       "thumbnail": thumbnail.asset->url,
     }`,
-    { category }
-  )
-}
-
-export async function getProductsRecomendation() {
-  return client.fetch(
-    groq`*[_type == "product" && references(*[ title == "Rekomendasi"]._id)] | order(publishedAt desc) {
-      title,
-      price,
-      "slug": slug.current,
-      location,
-      categories,
-      "thumbnail": thumbnail.asset->url,
-      publishedAt
-    }`
+    { category },
+    {
+      cache: 'no-store'
+    }
   )
 }
 

@@ -1,4 +1,5 @@
 import ProductDetail from "@/components/Product/ProductDetail";
+import ProductNotFound from "@/components/ProductNotFound";
 import { getProduct } from "@/services/sanity-api";
 
 export async function generateMetadata({ params: { slug } }) {
@@ -21,9 +22,14 @@ export async function generateMetadata({ params: { slug } }) {
 
 export default async function page({ params: { slug } }) {
   const product = await getProduct(slug);
+  console.log(Object.keys(product).length > 0);
   return (
     <main className="w-full max-w-[1080px] mx-auto px-8 animate-show-fade-in">
-      <ProductDetail product={product} />
+      {Object.keys(product).length > 0 ? (
+        <ProductDetail product={product} />
+      ) : (
+        <ProductNotFound />
+      )}
     </main>
   )
 }

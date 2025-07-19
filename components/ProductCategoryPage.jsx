@@ -23,7 +23,7 @@ export default async function ProductCategoryPage({ category_title, icon }) {
       <div className="p-4 grid lg:grid-cols-3 gap-2 md:grid-cols-2">
         <Suspense fallback={<LoadingSpinner />}>
           {products.length > 0 && (
-            products.map((product) => <ProductItem key={product.slug} {...product} />)
+            products.map((product) => <ProductItem className='h-[25rem]' key={product.slug} {...product} />)
           )}
         </Suspense>
       </div>
