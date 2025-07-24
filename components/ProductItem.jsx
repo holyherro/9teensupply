@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ProductItem({ location, thumbnail, title, price, slug, className }) {
   return (
-    <Link href={`/product/${slug}`} className={`rounded-xl border bg-card text-card-foreground shadow block overflow-hidden ${className}`}>
+    <Link href={`/product/${slug}`} className={`rounded-md border bg-card text-card-foreground shadow block overflow-hidden ${className}`}>
       <Image
         src={thumbnail}
         width={1080}

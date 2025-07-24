@@ -10,7 +10,7 @@ export default async function ProductCategoryPage({ category_title, icon }) {
   const products = await getProducts(category_title);
   return (
     <Card className="mt-4 overflow-hidden mb-4">
-      <h1 className="w-[30rem] text-[1.4rem] h-14 px-4 bg-slate-800 flex items-center text-white rounded-tr-full rounded-br-full">
+      <h1 className="w-[30rem] text-[.9rem] sm:text-[1.4rem] h-14 px-4 bg-slate-800 flex items-center text-white rounded-tr-full rounded-br-full">
         <ArrowBack />
 
         <span className="ml-4">Kategori : {" "}</span>

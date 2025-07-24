@@ -8,11 +8,11 @@ import { Button } from "../ui/button";
 import ArrowBack from "../ArrowBack";
 import { PortableText } from "next-sanity";
 
-export default function ProductDetail({ product }) {
+export default function ProductDetail({ product, slug }) {
   const { title, location, price, description, latitude, longitude, images } = product;
 
   const handleBookingProduct = () => {
-    const message = `Halo saya tertarik dengan produk ${title}`.split(" ").join("%20");
+    const message = `Halo saya tertarik dengan produk ${title} https://9teensupply.vercel.app/product/${slug}`.split(" ").join("%20");
     window.open(`https://wa.me/6285892748031?text=${message}`, '_blank')
   }
   return (

@@ -27,6 +27,7 @@ export async function getProduct(slug) {
       images[] {
         'url': asset->url
       },
+      "thumbnail": thumbnail.asset->url,
       description,
       latitude,
       longitude,
